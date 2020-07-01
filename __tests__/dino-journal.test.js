@@ -1,3 +1,5 @@
+import { JournalEntry } from './../src/dino-journal.js';
+
 describe('create JournalEntry object', () => {
 
   test('should create JournalEntry object', () => {

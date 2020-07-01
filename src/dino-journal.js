@@ -25,9 +25,3 @@ export class JournalEntry {
   }
 
 }
-
-export async function dinoIpsum(words, paragraphs) {
-  let response = await fetch(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=${paragraphs}&words=${words}`);
-  let data = await response.json();
-  return data;
-}

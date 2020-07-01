@@ -27,11 +27,7 @@ Web app for posting stories in dino theme.
 
 ## Known Bugs
 
-_ _
-
-## Support and contact details
-
-
+_No known bugs_
 
 ## Technologies Used
 

@@ -2,9 +2,11 @@ import { JournalEntry } from './../src/dino-journal.js';
 
 describe('create JournalEntry object', () => {
   let journalEntry;
+  let paragraphTest;
 
   beforeEach(function(){
     journalEntry = new JournalEntry("title", "I have watched all Jurassic park movies");
+    paragraphTest = new JournalEntry("title", "One\n\nTwo\n\nThree");
   });
 
   test('should create JournalEntry object', () => {
@@ -21,4 +23,8 @@ describe('create JournalEntry object', () => {
   test('should count number of words in body of JournalEntry object', () => {
     expect(journalEntry.numberOfWordsInEntry()).toBe(7);
   });
+
+  test('should count number of paragraphs by spliting the body property by new line characters and returning the length', () => {
+    expect(paragraphTest.numberOfParagraphsInBody()).toBe(3);
+  })
 });

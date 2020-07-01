@@ -1,6 +1,22 @@
 export class JournalEntry {
-  constructor(title, entry) {
+  constructor(title, body) {
     this.title = title;
-    this.entry = entry;
+    this.body = body;
+  }
+
+  numberOfWords(str) {
+    while (str.includes("  "))
+    {
+        str = str.replace("  ", " ");
+    }
+    return str.split(" ").length;
+  }
+
+  numberOfWordsInTitle() {
+    return this.numberOfWords(this.title);
+  }
+
+  numberOfWordsInEntry() {
+    return this.numberOfWords(this.body);
   }
 }

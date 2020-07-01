@@ -15,10 +15,10 @@ describe('create JournalEntry object', () => {
   });
 
   test('should count number of words in title of JournalEntry object', () => {
-    expect(entry.numberOfWordsInTitle()).toBe(1);
+    expect(journalEntry.numberOfWordsInTitle()).toBe(1);
   });
 
-  /*test('should count number of words in body of JournalEntry object', () => {
-    expect(entry.numberOfWordsInEntry()).toBe(7);
-  });*/
+  test('should count number of words in body of JournalEntry object', () => {
+    expect(journalEntry.numberOfWordsInEntry()).toBe(7);
+  });
 });

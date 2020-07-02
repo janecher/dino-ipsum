@@ -21,7 +21,7 @@ export class JournalEntry {
   }
 
   numberOfParagraphsInBody() {
-    return this.body.split("\n\n").length;
+    return this.body.split("\n").length;
   }
 
 }

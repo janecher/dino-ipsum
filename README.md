@@ -31,7 +31,7 @@ _No known bugs_
 
 ## Technologies Used
 
-* HTLM
+* HTML
 * CSS
 * Bootstrap
 * jQuery

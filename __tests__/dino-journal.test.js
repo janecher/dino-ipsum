@@ -6,7 +6,7 @@ describe('create JournalEntry object', () => {
 
   beforeEach(function(){
     journalEntry = new JournalEntry("title", "I have watched all Jurassic park movies");
-    paragraphTest = new JournalEntry("title", "One\n\nTwo\n\nThree");
+    paragraphTest = new JournalEntry("title", "One\nTwo\nThree");
   });
 
   test('should create JournalEntry object', () => {

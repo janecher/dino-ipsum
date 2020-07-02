@@ -9,7 +9,7 @@ function createDinoIpsumBody(arrayOfArrays) {
   let result = "";
   for(let i = 0; i < arrayOfArrays.length; i++) {
     let subString = arrayOfArrays[i].join(" ");
-    result += " " + subString;
+    result += "<p>" + subString + "</p>";
   }
   return result;
 }
@@ -29,7 +29,7 @@ $(document).ready(function() {
     })();
 
     function addDinoIpsumEntry(responseTitle, responseBody) {
-      let result = `<h3>${responseTitle[0].join(" ")}</h3><p>${createDinoIpsumBody(responseBody)}</p>`;
+      let result = `<h3>${responseTitle[0].join(" ")}</h3>${createDinoIpsumBody(responseBody)}`;
       $(".result").append(result);
     }
     $("#title").val("");

@@ -5,23 +5,39 @@ export class JournalEntry {
   }
 
   numberOfWords(str) {
-    while (str.includes("  "))
+    let trimString = str.trim();
+    while (trimString.includes("  "))
     {
-        str = str.replace("  ", " ");
+      trimString = trimString.replace("  ", " ");
     }
-    return str.split(" ").length;
+    return trimString.split(" ").length;
   }
 
   numberOfWordsInTitle() {
     return this.numberOfWords(this.title);
   }
 
-  numberOfWordsInEntry() {
-    return this.numberOfWords(this.body);
+  convertBodyToArrayOfLines() {
+    return this.body.split("\n");
+  }
+
+  numberOfWordsInEachParagraph() {
+    let numberOfWordsArray = [];
+    this.convertBodyToArrayOfLines().forEach((element) => {
+      numberOfWordsArray.push(this.numberOfWords(element));
+    });
+    return numberOfWordsArray;
+  }
+
+  numberOfWordsInBody() {
+    let number = 0;
+    this.numberOfWordsInEachParagraph().forEach((element) => {
+      number += element;
+    });
+    return number;
   }
 
   numberOfParagraphsInBody() {
     return this.body.split("\n").length;
   }
-
 }
